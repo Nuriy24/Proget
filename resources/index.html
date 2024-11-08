@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Логотип</title>
+<style>
+body {
+  margin: 0; /* Убираем отступы по умолчанию */
+}
+
+.header {
+  background-color: #f0f0f0; /* Цвет фона (опционально) */
+  padding: 10px; /* Отступы (опционально) */
+  text-align: right; /* Выравнивание логотипа по правому краю */
+}
+
+.logo {
+  max-width: 100px; /* Максимальная ширина логотипа */
+  max-height: 100px; /* Максимальная высота логотипа */
+  vertical-align: middle; /* Вертикальное выравнивание */
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="https://yt3.googleusercontent.com/ytc/AIdro_nySrc1NjA8oDAQ6zfMnniTUcPl02wIecPIMFAXr_8BTw=s900-c-k-c0x00ffffff-no-rj" alt="Логотип" class="logo">
+  <h1>Школа танцев "Лезгинка Нур"</h1>
+  <div class="burger" onclick="toggleSidebar()">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+</header>
+
+<nav id="nav">
+  <a href="#about">О школе</a>
+  <a href="#gallery">Галерея</a>
+  <a href="#directions">Направления танцев</a>
+  <a href="#prices">Цены</a>
+  <a href="#shop">Магазин</a>
+  <a href="#contact">Контакты</a>
+</nav>
+</div>
+<div>
+  <!-- Остальной контент страницы -->
+</div>
+</body>
+</html>
+
+    <header>    
+        
+        <main class="content">
+            <section id="about">
+                <h2>О школе</h2>
+                <p>Добро пожаловать в Школу танцев "Лезгинка Нур". У нас Вы сможете научиться танцевать и раскрыть свой талант!</p>
+                <img src="https://avatars.mds.yandex.net/get-altay/13197739/2a000001918e57b01e24a0a8d9f0d6af18d7/XXXL" alt="Фото" width="1000">
+            </section>
+        
+            <section id="gallery">
+                <h2>Галерея</h2>
+                <div class="carousel">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="carousel-container">
+                        <div class="carousel-slide" onclick="showDescription('Описание танца 1')">
+                            <img src="https://avatars.mds.yandex.net/get-altay/5254653/2a0000017b35400e7d22a5c19f3fb1971293/XXL_height" alt="Танец 1">
+                        </div>
+                        <div class="carousel-slide" onclick="showDescription('Описание танца 2')">
+                            <img src="https://avatars.mds.yandex.net/get-altay/11748256/2a000001918e57adf0cbff40953e8a63415a/XXXL" alt="Танец 2">
+                        </div>
+                        <div class="carousel-slide" onclick="showDescription('Описание танца 3')">
+                            <img src="https://avatars.mds.yandex.net/get-altay/13987456/2a000001918e57aa785cb72f18691795df21/XXXL" alt="Танец 3">
+                        </div>
+                    </div>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    <div id="description" class="description"></div>
+                </div>
+            </section>
+        </main>
+        
+        <style>
+            .carousel {
+                position: relative;
+                width: 100%;
+                max-width: 800px; /* Максимальная ширина карусели */
+                margin: auto;
+                overflow: hidden;
+            }
+        
+            .carousel-container {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+        
+            .carousel-slide {
+                min-width: 100%; /* Карточки занимают всю ширину родителя */
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+        
+            .carousel img {
+                width: 100%;
+                height: auto; /* Соотношение сторон изображений */
+            }
+        
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(255, 255, 255, 0.7);
+                border: none;
+                cursor: pointer;
+                font-size: 24px;
+                padding: 10px;
+            }
+        
+            .prev {
+                left: 10px;
+            }
+        
+            .next {
+                right: 10px;
+            }
+        
+            .description {
+                margin-top: 20px;
+                font-size: 16px;
+            }
+        </style>
+        
+        <script>
+            let currentSlide = 0;
+        
+            function moveSlide(direction) {
+                const slides = document.querySelectorAll('.carousel-slide');
+                currentSlide += direction;
+        
+                // Убедитесь, что currentSlide остается в пределах количества слайдов
+                if (currentSlide < 0) {
+                    currentSlide = slides.length - 1; // Переход к последнему слайду
+                } else if (currentSlide >= slides.length) {
+                    currentSlide = 0; // Переход к первому слайду
+                }
+        
+                const container = document.querySelector('.carousel-container');
+                container.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+        
+            function showDescription(description) {
+                const descriptionElement = document.getElementById('description');
+                descriptionElement.innerText = description;
+            }
+        </script>
+         <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Направления танцев</title>
+           <style>
+             #dance-directions {
+               background-image: url('path/to/your/image.jpg'); /* Замените на путь к Вашему изображению */
+               background-size: cover; /* Или contain, если нужно, чтобы изображение полностью поместилось */
+               background-repeat: no-repeat;
+               padding: 20px;
+               color: white; /* Текст на фоне изображения */
+             }
+         
+             #dance-directions > div {
+               display: flex;
+               flex-wrap: wrap; /* Разрешаем перенос строк */
+               justify-content: space-around; /* Равномерное распределение колонок */
+             }
+         
+             .dance-column {
+               flex: 1 0 30%; /* 3 колонки, каждая занимает 30% ширины */
+               margin: 10px;
+               padding: 10px;
+               background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для читаемости */
+               border-radius: 5px;
+             }
+         
+             /*  Желто-черный эффект можно добавить через  linear-gradient  в background-image, 
+                 например: background-image: linear-gradient(to bottom, yellow, black);  */     
+           </style>
+         </head>
+         <body>
+         
+           <section id="dance-directions">
+             <h2>#Направление танцев</h2>
+             <div>
+               <div class="dance-column">
+                 <h3>Вид танца 1</h3>
+                 <p>Описание вида танца 1.</p>
+               </div>
+               <div class="dance-column">
+                 <h3>Вид танца 2</h3>
+                 <p>Описание вида танца 2.</p>
+               </div>
+               <div class="dance-column">
+                 <h3>Вид танца 3</h3>
+                 <p>Описание вида танца 3.</p>
+               </div>
+             </div>
+           </section>
+         
+         </body>
+         </html>
+         
+       
+
+
+         <!DOCTYPE html>
+         <html>
+         <head>
+             <title>Регистрация</title>
+         </head>
+         <body>
+             <h1>Регистрация</h1>
+             <form method="POST" action="{{ route('register') }}">
+                 @csrf
+                 <input type="text" name="name" placeholder="Имя" required><br>
+                 <input type="email" name="email" placeholder="Email" required><br>
+                 <input type="password" name="password" placeholder="Пароль" required><br>
+                 <input type="password" name="password_confirmation" placeholder="Подтверждение пароля" required><br>
+                 <button type="submit">Зарегистрироваться</button>
+             </form>
+             @if ($errors->any())
+                 <div>
+                     <ul>
+                         @foreach ($errors->all() as $error)
+                             <li>{{ $error }}</li>
+                         @endforeach
+                     </ul>
+                 </div>
+             @endif
+         
+         </body>
+         </html>
+         
+</body>
+</html>
+<footer>
+    <div class="contacts">
+        <p>Контакты:</p>
+        <p>Телефон: <strong>8 (980) 247-43-97</strong></p>
+        <p>Email: <a href="mailto:Lezginka-nur@yandex.ru">Lezginka-nur@yandex.ru</a></p>
+    </div>
+</footer>
+<head>
+    <link href="/dist/styles.css" rel="stylesheet">
+  </head>
+  

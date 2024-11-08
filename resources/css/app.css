@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#dance-directions {
+  background-image: url('path/to/your/image.jpg'); /* Замените на путь к Вашему изображению */
+  background-size: cover; /* Или contain, если нужно, чтобы изображение полностью поместилось */
+  background-repeat: no-repeat;
+  padding: 20px;
+  color: white; /* Текст на фоне изображения */
+}
+
+#dance-directions > div {
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос строк */
+  justify-content: space-around; /* Равномерное распределение колонок */
+}
+
+.dance-column {
+  flex: 1 0 30%; /* 3 колонки, каждая занимает 30% ширины */
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для читаемости */
+  border-radius: 5px;
+}
