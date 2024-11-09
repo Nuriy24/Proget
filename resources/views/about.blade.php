@@ -22,93 +22,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Школа танцев "Лезгинка Нур"</title>
     <style>
-        body 
-        {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            background-color: #ff5733;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo {
-            height: 50px;
-        }
-        nav {
-            margin-top: 60px;
-            background: #fff;
-            padding: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        .burger {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .burger div {
-            height: 3px;
-            width: 30px;
-            background-color: white;
-            margin: 4px;
-            transition: 0.3s;
-        }
-        .sidebar {
-            display: none;
-            position: fixed;
-            top: 60px;
-            right: 0;
-            background: #fff;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            width: 200px;
-        }
-        .sidebar a {
-            display: block;
-            margin: 10px 0;
-        }
-        .content {
-            margin-top: 80px;
-            padding: 20px;
-        }
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .photo {
-            margin: 10px;
-            cursor: pointer;
-        }
-        .description {
-            margin-top: 20px;
-            font-style: italic;
-        }
-        footer {
-            background-color: #ff5733;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Обеспечивает, что body занимает всю высоту */
+}
+
+header {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0; /* Явно указываем слева */
+    right: 0; /* Явно указываем справа */
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav {
+    margin-top: 60px; /* без изменения, требуется для отступа под фиксированным header */
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.sidebar {
+    display: none; /* Показывать по событию JavaScript */
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 200px;
+}
+
+.sidebar a {
+    display: block;
+    margin: 10px 0;
+}
+
+.content {
+    margin-top: 80px; /* Отступ под header */
+    padding: 20px;
+    flex: 1; /* Позволяет контенту растягиваться, если нужно */
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.description {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+footer {
+    background-color: #ff5733;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
     </style>
 </head>
 <body>
@@ -287,18 +303,15 @@
             top: 20px;
             right: 20px;
         }
-
         .burger-icon div {
             width: 30px;
             height: 3px;
             background-color: white;
             border-radius: 5px;
         }
-
         .burger-menu.active {
             display: flex;
         }
-
         /* Стили для футера */
         footer {
             background-color: #333;
@@ -306,16 +319,13 @@
             padding: 20px;
             text-align: center;
         }
-
         footer .contacts p {
             margin: 5px 0;
         }
-
         footer a {
             color: #ffd700;
             text-decoration: none;
         }
-
     </style>
 </head>
 <body>
@@ -333,7 +343,6 @@
             <a href="#contact">Контакты</a>
         </nav>
     </header>
-
     <div class="container">
         <!-- Регистрация на занятия -->
         <div class="registration-box">
@@ -344,13 +353,6 @@
             </a>
             <button class="register-button">Зарегистрироваться</button>
         </div>
-
-
-
-
-
-
-
         <!-- Направления танцев -->
         <section id="dance-directions">
             <h2>Наши направления танцев</h2>
@@ -369,22 +371,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Галерея -->
-        <section id="gallery">
-            <h2>Галерея</h2>
-            <p>Танцевальные моменты нашей школы.</p>
-            <!-- Здесь можно добавить изображения или слайдер -->
-        </section>
-
-        <!-- Информация о школе -->
-        <section id="about">
-            <h2>О школе</h2>
-            <p>Наша школа предлагает лучшие условия для обучения танцам.</p>
-            <!-- Текст о школе -->
-        </section>
-    </div>
-
     <!-- Контакты -->
     <footer id="contact">
         <div class="contacts">
@@ -393,7 +379,6 @@
             <p>Email: <a href="mailto:Lezginka-nur@yandex.ru">Lezginka-nur@yandex.ru</a></p>
         </div>
     </footer>
-
     <script>
         // Функция для открытия/закрытия меню
         function toggleMenu() {
@@ -403,3 +388,6 @@
     </script>
 </body>
 </html>
+
+
+

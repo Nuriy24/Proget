@@ -6,5 +6,5 @@ User::create([
     'name' => 'Admin',
     'email' => 'levela330@email.com',
     'password' => bcrypt('your-password'),
-    'role_id' => 1,  // Указываем роль
+    'role_id' => 1,  // 
 ]);

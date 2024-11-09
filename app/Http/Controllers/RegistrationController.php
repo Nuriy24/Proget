@@ -1,33 +1,26 @@
 <?php
-
-namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\User; // или Ваша модель пользователя
-use Illuminate\Support\Facades\Hash; // для хеширования пароля
+use Illuminate\Support\Facades\Hash;
 
-class RegistrationController extends Controller
+public function show()
 {
-    public function create()
-    {
-        return view('registration.create'); // Создайте view registration.create.blade.php
-    }
+    return view('register');
+}
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+public function store(Request $request)
+{
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
 
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+    $user = User::create([
+        'name' => $validated['name'],
+        'email' => $validated['email'],
+        'password' => Hash::make($validated['password']),
+    ]);
 
-        // Здесь можно добавить логику редиректа после успешной регистрации
-        return redirect('/');
-    }
+    return redirect()->route('about');
 }
