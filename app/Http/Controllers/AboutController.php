@@ -10,5 +10,4 @@ class AboutController
 {
     return view('about');
 }
-
-};
+}

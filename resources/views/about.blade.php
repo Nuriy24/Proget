@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-
+    <title>Школа Кавказких танцев в Воронеже     🌟 Kavkazz.com</title>
+<link rel=
     <!-- Подключение CSS файла -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <!-- Подключение CSS файла -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<body></html>
 </head>
 <body>
     <!-- Ваш контент страницы -->
-    <h1>О нас</h1>
-    <p>Это страница о нас.</p>
-</body>
-</html>
-
+    
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -105,7 +111,7 @@ nav a {
 }
 
 .photo {
-    margin: 10px;
+    margin: 20px;
     cursor: pointer;
 }
 
@@ -115,7 +121,7 @@ nav a {
 }
 
 footer {
-    background-color: #ff5733;
+    background-color: #771500;
     color: white;
     text-align: center;
     padding: 20px;
@@ -124,34 +130,24 @@ footer {
     left: 0;
     right: 0;
 }
-
     </style>
 </head>
+    </div>
 <body>
 <header>
     <img src="https://yt3.googleusercontent.com/ytc/AIdro_nySrc1NjA8oDAQ6zfMnniTUcPl02wIecPIMFAXr_8BTw=s900-c-k-c0x00ffffff-no-rj" alt="Логотип" class="logo">
-    <h1>Школа танцев "Лезгинка Нур"</h1>
-    <div class="burger" onclick="toggleSidebar()">
-        <div></div>
-        <div></div>
-        <div></div>
+    <h1>Школа танцев "Лезгинка Нур"
+      </nav>
     </div>
-</header> <nav id="nav">
-    <a href="#about">О школе</a>
-    <a href="#gallery">Галерея</a>
+    </h1>
+    <div class="burger" onclick="toggleSidebar()">
+</header> <nav ><a href="#gallery">Галерея</a>
     <a href="#directions">Направления танцев</a>
     <a href="#prices">Цены</a>
     <a href="#shop">Магазин</a>
-    <a href="#contact">Контакты</a>
+    <a href="#contact">Контакты</a></nav> 
 </nav>
-<div class="sidebar" id="sidebar">
-    <a href="#about" onclick="closeSidebar()">О школе</a>
-    <a href="#gallery" onclick="closeSidebar()">Галерея</a>
-    <a href="#directions" onclick="closeSidebar()">Направления танцев</a>
-    <a href="#prices" onclick="closeSidebar()">Цены</a>
-    <a href="#shop" onclick="closeSidebar()">Магазин</a>
-    <a href="#contact" onclick="closeSidebar()">Контакты</a>
-</div> <div class="content">
+  </div>
     <h2 id="about">О школе</h2><p>Добро пожаловать в Школу танцев "Лезгинка Нур". У нас Вы сможете научиться танцевать и раскрыть свой талант!</p>
     <img src="https://avatars.mds.yandex.net/get-altay/13197739/2a000001918e57b01e24a0a8d9f0d6af18d7/XXXL" alt="Фото" width="1000"> <div class="main-block__button-text"> Записаться на занятие</div>
     <nav id="nav">
@@ -167,17 +163,6 @@ footer {
             <img src="https://avatars.mds.yandex.net/get-altay/13987456/2a000001918e57aa785cb72f18691795df21/XXXL" alt="Танец 3" width="300">
         </div>
     </div>
-
-
-
-    <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Запись на занятие</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Подключаем FontAwesome для иконок -->
     <style>
         /* Основные стили */
         body {
@@ -185,11 +170,9 @@ footer {
             margin: 0;
             padding: 0;
         }
-
         .container {
             padding: 20px;
         }
-
         /* Блок для регистрации */
         .registration-box {
             padding: 20px;
@@ -338,12 +321,34 @@ footer {
         </div>
         <nav class="burger-menu" id="burger-menu">
             <a href="#about">О школе</a>
-            <a href="#dance-directions">Направления танцев</a>
             <a href="#gallery">Галерея</a>
             <a href="#contact">Контакты</a>
+            <a href="register">Зарегистрироваться</a>
+            <a href="adminpanel">Вход администратора</a>
+       <nav
+
+    >
+            <a clsss='p-2 texst-dark' href="#/about">О школе</a>
+            <a class='p-2' href="#gallery">Галерея</a>
+            <a class='p-2' href="#contact">Контакты</a>
+            <a class='btn btn-outline-warning' href="register">Зарегистрироваться</a>
+            <a class='p-2' href="adminpanel">Вход администратора</a>
+       <nav
+        <!-- Направления танцев -->
+        <h2 id="diretions">Направления танцев</h2>
+           
+            
+
+
+
+
+
+
+
         </nav>
     </header>
     <div class="container">
+
         <!-- Регистрация на занятия -->
         <div class="registration-box">
             <h2>Запиcь на занятие</h2>
@@ -351,26 +356,12 @@ footer {
             <a href="#registration-form" class="registration-link">
                 Подробнее <i class="fas fa-arrow-right"></i>
             </a>
+            
             <button class="register-button">Зарегистрироваться</button>
         </div>
-        <!-- Направления танцев -->
-        <section id="dance-directions">
-            <h2>Наши направления танцев</h2>
-            <div>
-                <div class="dance-column">
-                    <h3>Вид танца 1</h3>
-                    <p>Описание вида танца 1.</p>
-                </div>
-                <div class="dance-column">
-                    <h3>Вид танца 2</h3>
-                    <p>Описание вида танца 2.</p>
-                </div>
-                <div class="dance-column">
-                    <h3>Вид танца 3</h3>
-                    <p>Описание вида танца 3.</p>
-                </div>
-            </div>
-        </section>
+
+
+     
     <!-- Контакты -->
     <footer id="contact">
         <div class="contacts">
@@ -388,6 +379,7 @@ footer {
     </script>
 </body>
 </html>
+
 
 
 

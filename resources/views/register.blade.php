@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Регистрация</title>
+    @extends('admin')
+
+    @section('main_content')
+
+   @section <title>Регистрация на первое занятие</title>@endsection
+    tion('main_content')
 </head>
 <body>
-    <h1>Регистрация</h1>
-    <form method="POST" action="{{ route('register') }}">
-        @vite ('resources/css/app.css')
-        @csrf
-        <input type="text" name="name" placeholder="Имя" required><br>
+    <h1>Зарегистрироваться</h1>
+    <form method="POST" action="/register/check'">
+       #@vite ('resources/css/app.css')
+       #@csrf
+        <input type="text" name="name" placeholder="Имя" required> class="form-control"<br>
         <input type="email" name="email" placeholder="Email" required><br>
         <input type="password" name="password" placeholder="Пароль" required><br>
         <input type="password" name="password_confirmation" placeholder="Подтверждение пароля" required><br>

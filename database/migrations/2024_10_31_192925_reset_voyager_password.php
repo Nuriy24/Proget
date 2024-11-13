@@ -9,7 +9,7 @@ class ResetVoyagerPassword extends Migration
     {
         DB::table('users')
             ->where('email', 'admin@admin.com') // Замените на Ваш email
-            ->update(['password' => bcrypt('новый_пароль')]); // Замените 'новый_пароль' на Ваш новый пароль
+            ->update(['password' => bcrypt('1234567890')]); // Замените 'новый_пароль' на Ваш новый пароль
     }
 
     public function down()

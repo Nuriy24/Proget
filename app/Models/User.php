@@ -23,5 +23,6 @@ class User extends Authenticatable  // Используем Authenticatable от
 
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'password' => 'hashed',
     ];
 }
